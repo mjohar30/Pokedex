@@ -1,17 +1,18 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
-                <a class="navbar-brand" href="#">Pokedex</a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-danger">
+                <Link className="navbar-brand" to="/">Pokedex</Link>
+                <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul className="navbar-nav mr-auto">
+                    <li className="nav-item active">
+                        <Link className="nav-link" to="/">Home<span className="sr-only">(current)</span></Link>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Pokemons</a>
+                    <li className="nav-item active">
+                        <Link className="nav-link" to="/pokemons">Pokemons</Link>
                     </li>
                     </ul>
                 </div>

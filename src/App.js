@@ -1,8 +1,10 @@
 import React from 'react'
 import {BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
-import Home from './pages/Home'
 import Layout from './components/Layout'
+
+import Home from './pages/Home'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -10,8 +12,8 @@ function App() {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home}/>
-          {/* <Route path="/404" component={NotFound}/>
-          <Redirect from="*" to="/404"/> */}
+          <Route path="/404" component={NotFound}/>
+          <Redirect from="*" to="/404"/>
         </Switch>
       </Layout>
     </BrowserRouter>

@@ -12,7 +12,7 @@ function Home() {
                     <h1 className="text-uppercase">La mejor forma de organizar tus pokemons</h1>
                     <p>
                         Con la pokedex, podrás encontrar todos los pokemons que existen
-                        actualmente
+                        actualmente. Anímate y vuélvete el mejor, mejor que nadie más.
                     </p>
                 </div>
             </div>
