@@ -7,9 +7,9 @@ function Home() {
     return (
         <Fragment>
             <div className="container home">
-                <div className="row align-items-center">
+                <div className="row m-10">
                     <div className="col-12">
-                        <img className="img-fluid mx-auto d-block logo" src="https://res.cloudinary.com/dioxkbk6g/image/upload/v1569205776/Pokeapi/logo-6221638601ef7fa7c835eae08ef67a16_xokydx.png" alt="Pokeapi"/>
+                        <img className="img-fluid logo" src="https://res.cloudinary.com/dioxkbk6g/image/upload/v1569205776/Pokeapi/logo-6221638601ef7fa7c835eae08ef67a16_xokydx.png" alt="Pokeapi"/>
                     </div>
                 </div>
                 <div className="row align-items-center mt-3">

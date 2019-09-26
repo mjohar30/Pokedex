@@ -1,5 +1,8 @@
 .logo{
-    height: 30vh;
+    /* height: 30vh; */
+    /* width:128px; */
+    height:150px;
+    margin-top: 10px
 }
 
 .home {
