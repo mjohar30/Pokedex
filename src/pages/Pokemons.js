@@ -10,7 +10,8 @@ class Pokemons extends Component {
         error: null,
         data: {
             results: []
-        }
+        },
+        modalIsOpen: false
     }
 
     componentDidMount(){
@@ -32,6 +33,14 @@ class Pokemons extends Component {
         }
     }
 
+    handleOpenModal = e => {
+        this.setState({modalIsOpen: true})
+    }
+
+    handleCloseModal = e => {
+        this.setState({modalIsOpen: false})
+    }
+
     render() {
 
         if (this.state.loading === true) {
@@ -45,11 +54,13 @@ class Pokemons extends Component {
         return (
             <Fragment>
                 <div className="container">
-                    <PokemonsList pokemons={this.state.data.results}/>
+                    <PokemonsList 
+                        pokemons={this.state.data.results}
+                        onCloseModal={this.handleCloseModal}
+                        onOpenModal={this.handleOpenModal}
+                        modalIsOpen={this.state.modalIsOpen}
+                    />
                     {this.state.loading && <Loader/>}
-                    <div className="row">
-                        
-                    </div>
                 </div>
 
             </Fragment>

@@ -18,6 +18,9 @@ class PokemonsCard extends Component {
                 ability: []
             }]
         },
+        selected: [{
+            name: []
+        }]
     }
 
     componentDidMount(){
@@ -48,7 +51,7 @@ class PokemonsCard extends Component {
                 <div className="pokemon-card row text-center align-items-center bg-light border border-dark rounded-lg">
                     <div className="col-2 p-2 border-dark">
                         <div className="form-check">
-                            <input type="checkbox" className="form-check-input position-static" id={this.props.pokemon.name}/>
+                            <input type="checkbox" className="form-check-input position-static" id={this.props.pokemon.name} onClick=""/>
                         </div>
                     </div>
                     <div className="col-2 border-left border-right border-dark">
