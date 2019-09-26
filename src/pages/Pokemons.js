@@ -2,7 +2,6 @@ import React, { Component, Fragment } from 'react';
 
 import PokemonsList from '../components/PokemonsList'
 import Loader from '../components/Loader'
-import { setFlagsFromString } from 'v8';
 
 class Pokemons extends Component {
 

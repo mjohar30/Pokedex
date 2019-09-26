@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PokemonsCard from './PokemonsCard'
-import SavePokemonsModal from '../components/SavePokemonsModal'
+import SavePokemonsModal from './SavePokemonsModal'
 
 // Usando React Hooks filtramos los datos basándonos en la
 // búsqueda del usuario, para obtener un nuevo conjunto de
@@ -77,7 +77,30 @@ function PokemonsList(props){
                 <button onClick={props.onOpenModal} className="btn btn-success mb-3">
                     Guardar
                 </button>
-                <div className="container ">
+
+                {/* Prueba */}
+                <table className="table table-bordered bg-white text-center align-items-center">
+                    <thead className="thead-light">
+                      <tr>
+                        <th scope="col">Checar</th>
+                        <th scope="col">Imágen</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Habilidades</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        {filteredPokemons.map(pokemon => {
+                            return(
+                                <PokemonsCard className="h-100" key={pokemon.name} pokemon={pokemon}/>
+                            )
+                        })}
+                    </tbody>
+                </table>
+                
+
+                {/* Prueba */}
+                {/* <div className="container ">
                     <div className="pokemon-card row d-flex text-center bg-light border border-dark rounded-lg">
                         <div className="col-2 pl-2 border-dark">
                             <h4>Checar</h4>
@@ -95,12 +118,12 @@ function PokemonsList(props){
                             <h4>Habilidades</h4>
                         </div>
                     </div>
-                </div>
-                {filteredPokemons.map(pokemon => {
+                </div> */}
+                {/* {filteredPokemons.map(pokemon => {
                     return(
                         <PokemonsCard key={pokemon.name} pokemon={pokemon}/>
                     )
-                })}
+                })} */}
                 <button onClick={props.onOpenModal} className="btn btn-success mt-3 mb-3">
                     Guardar
                 </button>
