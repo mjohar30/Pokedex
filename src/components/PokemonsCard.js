@@ -6,6 +6,14 @@ import './styles/PokemonsCard.css'
 
 class PokemonsCard extends Component {
     
+    // Se tiene que hacer una nueva consulta de los datos
+    // para poder extraer más información de los pokemones.
+    // En los sprites se encontrarán las url para las imágenes.
+    // En los types serán los atributos que permiten tener clasificados
+    // a los pokemones.
+    // En las abilities, se mostraran todos los nombres de las
+    // habilidades que tengan cada uno de ellos.
+
     state = {
         loading: true,
         error: null,
@@ -32,11 +40,14 @@ class PokemonsCard extends Component {
         this.setState({ loading: true, error: null });
 
         try {
-          const response = await fetch(`${this.props.pokemon.url}`)
-          const data = await response.json()
-          this.setState({ loading: false, data: data });
+            // Al traer los nombres de los pokemons la primera vez,
+            // tendremos un dato llamado url que al acceder a él podremos
+            // visualizar más información de estos.
+            const response = await fetch(`${this.props.pokemon.url}`)
+            const data = await response.json()
+            this.setState({ loading: false, data: data });
         } catch (error) {
-          this.setState({ loading: false, error: error });
+            this.setState({ loading: false, error: error });
         }
     }
 

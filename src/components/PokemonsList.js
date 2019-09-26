@@ -3,10 +3,14 @@ import React from 'react';
 import PokemonsCard from './PokemonsCard'
 import SavePokemonsModal from '../components/SavePokemonsModal'
 
+// Usando React Hooks filtramos los datos basándonos en la
+// búsqueda del usuario, para obtener un nuevo conjunto de
+// datos al cual llamaremos filteredPokemon.
+
 function useSearchPokemons(pokemons){
     const [query, setQuery] = React.useState('')
     const [filteredPokemons, setFilteredPokemons] = React.useState(pokemons)
-  
+
     React.useMemo(() => {
       const result = pokemons.filter(pokemon => {
         return `${pokemon.name}`
@@ -43,7 +47,7 @@ function PokemonsList(props){
                 </div>
             </div>
             <div className="container">
-                <h3>No pokemons were found</h3>
+                <h3 className="text-white">No pokemons were found</h3>
             </div>
           </div>
         );
@@ -100,6 +104,9 @@ function PokemonsList(props){
                 <button onClick={props.onOpenModal} className="btn btn-success mt-3 mb-3">
                     Guardar
                 </button>
+                {/* Al presionar el boton guardar, mandaremos a llamar el modal.
+                El modal nos servirá para desplegar un elemento que está 
+                fuera de nuestra aplicación, pero que si se encuentra en el DOM. */}
                 <SavePokemonsModal
                     isOpen={props.modalIsOpen}
                     onClose={props.onCloseModal}
