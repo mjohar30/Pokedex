@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+import './styles/Header.css'
+
+function Header(){
     return (
-        <div data-target="#navbarSupportedContent" data-offset="57">
+        <div id="navbar" data-target="#navbarSupportedContent" data-offset="57">
             <nav className="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
                 <div className="container">
                     <Link className="navbar-brand" to="/">Pokedex</Link>

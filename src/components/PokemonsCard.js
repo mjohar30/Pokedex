@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import Loader from './Loader'
+
 import './styles/PokemonsCard.css'
 
 class PokemonsCard extends Component {
@@ -11,6 +13,9 @@ class PokemonsCard extends Component {
             sprites: [],
             types: [{
                 type: []
+            }],
+            abilities: [{
+                ability: []
             }]
         },
     }
@@ -33,29 +38,40 @@ class PokemonsCard extends Component {
     }
 
     render() {
+
+        if (this.state.loading === true) {
+            return <Loader/>
+        }
+
         return (
-            <div className="container">
+            <div className="container-fluid">
                 <div className="pokemon-card row text-center align-items-center bg-light border border-dark rounded-lg">
-                    <div className="col-1 form-group">
-                        <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+                    <div className="col-2 p-2 border-dark">
+                        <div className="form-check">
+                            <input type="checkbox" className="form-check-input position-static" id={this.props.pokemon.name}/>
+                        </div>
                     </div>
-                    <div className="col-3">
-                        <img src={this.state.data.sprites.front_default} alt={this.props.pokemon.name}/>
+                    <div className="col-2 border-left border-right border-dark">
+                        <img class="img-fluid" src={this.state.data.sprites.front_default} alt={this.props.pokemon.name}/>
                     </div>
-                    <div className="col-2 text-uppercase">
-                        <p><strong>{this.props.pokemon.name}</strong></p>
+                    <div className="col-3 border-right border-dark text-capitalize pokemon-card__item">
+                        <p>{this.props.pokemon.name}</p>
                     </div>
-                    <div className="col-3">
+                    <div className="col-2 border-right border-dark text-capitalize">
                         {this.state.data.types.map(pokemon => {
                             return(
-                                <div key={`${this.props.pokemon.name}${pokemon.slot}`}>
-                                    <p><strong>{pokemon.type.name}</strong></p>
+                                <div key={`${this.props.pokemon.name}/${pokemon.type.name}`}>
+                                    <li>{pokemon.type.name}</li>
                                 </div>
                             )
                         })}
                     </div>
-                    <div className="col-3">
-
+                    <div className="col-3 border-right text-capitalize">
+                            {this.state.data.abilities.map(pokemon => {
+                                return(
+                                    <li key={`${this.props.pokemon.name}${pokemon.ability.name}`}>{pokemon.ability.name}</li>
+                                )
+                            })}
                     </div>
                 </div>
             </div>
