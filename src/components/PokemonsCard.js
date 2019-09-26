@@ -52,7 +52,7 @@ class PokemonsCard extends Component {
                         </div>
                     </div>
                     <div className="col-2 border-left border-right border-dark">
-                        <img class="img-fluid" src={this.state.data.sprites.front_default} alt={this.props.pokemon.name}/>
+                        <img className="img-fluid" src={this.state.data.sprites.front_default} alt={this.props.pokemon.name}/>
                     </div>
                     <div className="col-3 border-right border-dark text-capitalize pokemon-card__item">
                         <p>{this.props.pokemon.name}</p>

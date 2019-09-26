@@ -5,7 +5,7 @@ import './styles/Loader.css'
 class Loader extends Component {
     render() {
         return (
-            <div class="loader loader-pokeball is-active"></div>
+            <div className="loader loader-pokeball is-active"></div>
         );
     }
 }

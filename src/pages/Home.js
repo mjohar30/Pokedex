@@ -16,10 +16,9 @@ function Home() {
                     <div className="col-12 col-lg-6 text-center text-lg-left text-white">
                         <h1 className="text-uppercase">La mejor forma de organizar tus pokemons</h1>
                         <p>
-                            Con la pokedex, podrás encontrar todos los pokemons que existen
-                            actualmente. Anímate y vuélvete el mejor, mejor que nadie más.
+                            Con la pokedex, podrás encontrar todos los pokemons de la región de Kanto. Anímate y vuélvete el mejor, mejor que nadie más.
                         </p>
-                        <Link className="btn btn-warning" to="/Pokemons">
+                        <Link className="btn btn-warning mb-1" to="/Pokemons">
                             ¡Empieza ya!
                         </Link>
                     </div>
