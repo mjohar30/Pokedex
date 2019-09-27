@@ -11,7 +11,8 @@ class Pokemons extends Component {
         data: {
             results: []
         },
-        modalIsOpen: false
+        modalIsOpen: false,
+        selectedPokemons: []
     }
 
     componentDidMount(){
@@ -49,6 +50,19 @@ class Pokemons extends Component {
         this.setState({modalIsOpen: false})
     }
 
+    handleCheckboxChange = e => {
+        if (e.target.checked === true & this.state.selectedPokemons.length < 10){
+            this.setState({selectedPokemons: [
+                ...this.state.selectedPokemons,
+                {name : e.target.id}
+            ]})
+        }
+    }
+
+    handleSave = e => {
+        this.props.history.push('/')
+    }
+
     render() {
         // Si los datos aún no terminan de cargar completamente, 
         // se presentará un loader para informar al usuario que 
@@ -69,6 +83,9 @@ class Pokemons extends Component {
                         onCloseModal={this.handleCloseModal}
                         onOpenModal={this.handleOpenModal}
                         modalIsOpen={this.state.modalIsOpen}
+                        onCheckboxChange={this.handleCheckboxChange}
+                        selectedPokemons={this.state.selectedPokemons}
+                        onSave={this.handleSave}
                     />
                     {this.state.loading && <Loader/>}
                 </div>

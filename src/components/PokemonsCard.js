@@ -25,10 +25,7 @@ class PokemonsCard extends Component {
             abilities: [{
                 ability: []
             }]
-        },
-        selected: [{
-            name: []
-        }]
+        }
     }
 
     componentDidMount(){
@@ -51,6 +48,17 @@ class PokemonsCard extends Component {
         }
     }
 
+    // handleSelectedPokemons = pokemon => {
+    //     this.setState({selectedPokemons: pokemon})
+    // }
+
+    // handleCheckboxChange(e) {
+    //     console.log('value of checkbox : ', e.target.checked);
+    //     if (e.target.checked === true){
+    //         console.log(e.target.id)
+    //     }
+    // }
+
     render() {
 
         if (this.state.loading === true) {
@@ -60,7 +68,7 @@ class PokemonsCard extends Component {
         return (
             <tr className="text-center align-items-center">
               <th scope="row form-check">
-                <input type="checkbox" className="form-check-input position-static" id={this.props.pokemon.name} onClick=""/>
+                <input type="checkbox" className="form-check-input position-static" id={this.props.pokemon.name} onClick={this.props.checkboxChange}/>
               </th>
               <td className="p-0">
                   <img className="img-fluid" src={this.state.data.sprites.front_default} alt={this.props.pokemon.name}/>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// import "bootstrap/js/src/collapse.js";
 import './styles/Header.css'
 
 function Header(){

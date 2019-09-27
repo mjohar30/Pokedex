@@ -77,8 +77,6 @@ function PokemonsList(props){
                 <button onClick={props.onOpenModal} className="btn btn-success mb-3">
                     Guardar
                 </button>
-
-                {/* Prueba */}
                 <table className="table table-bordered bg-white text-center align-items-center">
                     <thead className="thead-light">
                       <tr>
@@ -92,38 +90,11 @@ function PokemonsList(props){
                     <tbody>
                         {filteredPokemons.map(pokemon => {
                             return(
-                                <PokemonsCard className="h-100" key={pokemon.name} pokemon={pokemon}/>
+                                <PokemonsCard checkboxChange={props.onCheckboxChange} className="h-100" key={pokemon.name} pokemon={pokemon}/>
                             )
                         })}
                     </tbody>
                 </table>
-                
-
-                {/* Prueba */}
-                {/* <div className="container ">
-                    <div className="pokemon-card row d-flex text-center bg-light border border-dark rounded-lg">
-                        <div className="col-2 pl-2 border-dark">
-                            <h4>Checar</h4>
-                        </div>
-                        <div className="col-2 border-left border-right border-dark">
-                            <h4>Imágen</h4>
-                        </div>
-                        <div className="col-3 border-right border-dark">
-                            <h4>Nombre</h4>
-                        </div>
-                        <div className="col-2 border-right border-dark">
-                            <h4>Tipo</h4>
-                        </div>
-                        <div className="col-3 border-right">
-                            <h4>Habilidades</h4>
-                        </div>
-                    </div>
-                </div> */}
-                {/* {filteredPokemons.map(pokemon => {
-                    return(
-                        <PokemonsCard key={pokemon.name} pokemon={pokemon}/>
-                    )
-                })} */}
                 <button onClick={props.onOpenModal} className="btn btn-success mt-3 mb-3">
                     Guardar
                 </button>
@@ -133,6 +104,8 @@ function PokemonsList(props){
                 <SavePokemonsModal
                     isOpen={props.modalIsOpen}
                     onClose={props.onCloseModal}
+                    onSave={props.onSave}
+                    data={props.selectedPokemons}
                 />
             </div>
         </div>
