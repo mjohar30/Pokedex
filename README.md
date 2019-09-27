@@ -46,14 +46,16 @@ Podrás empezar a visualizar la aplicación y los cambios que hagas en la siguie
 
  Durante la elaboración del proyecto, empezaron a salir algunos bugs que no se han podido arreglar, los cuales son: 
  * Al hacerse responsive el sitio:
-    * ~~El botón para abrir el Header no funciona. Probablemente por el hecho de que estoy usando un elemento Link, y el componente navbar de Bootstrap necesita una etiqueta <a> para poder funcionar correctamente.~~ El botón funciona perfectamente. El problema que tenía era que no había instalado la dependencia de jquery
+    * ~~El botón para abrir el Header no funciona. Probablemente por el hecho de que estoy usando un elemento Link, y el componente navbar de Bootstrap necesita una etiqueta a para poder funcionar correctamente.~~ <br>
+    **Solución:** El botón funciona perfectamente. El problema que tenía era que no había instalado la dependencia de jquery
     ni había importado el archivo bootstrap.js en el index.js.
-    * ~~El listado de pokemons no cuadra con la tabla, lo cual ocasiona que algunos elementos estén encima de otros.~~ Utilicé un formato de tabla que proporciona
-    bootstrap para lograr hacer el responsive, ya que fue la forma más rápida que encontré.
+    * ~~El listado de pokemons no cuadra con la tabla, lo cual ocasiona que algunos elementos estén encima de otros.~~ <br>
+    **Solución:** Utilicé un formato de tabla que proporciona bootstrap para lograr hacer el responsive, ya que fue la forma más rápida que encontré.
  * Al hacer la búsqueda de pokemons:
     * Si le das click al checkbox del pokemón que encontraste, al regresar al listado completo el checkbox se reinicia y nunca aparece que lo seleccionaste, pero el dato si se queda guardado en tu selección.
  * Al confirmar los datos seleccionados: 
-    * ~~Más que un bug, tuve problemas tratando de pasar los datos seleccionados a un modal para mostrarlos. Entonces en la aplicación no se puede mostrar dicha selección.~~ Ya se pueden visualizar los pokemones seleccionados al dar Guardar, y están limitados a sólo los primeros 10 seleccionados.
+    * ~~Más que un bug, tuve problemas tratando de pasar los datos seleccionados a un modal para mostrarlos. Entonces en la aplicación no se puede mostrar dicha selección.~~ <br>
+    **Solución:** Ya se pueden visualizar los pokemones seleccionados al dar Guardar, y están limitados a sólo los primeros 10 seleccionados.
 
  ## Cosas por mejorar
 
