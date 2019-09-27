@@ -55,7 +55,7 @@ Podrás empezar a visualizar la aplicación y los cambios que hagas en la siguie
  * Al confirmar los datos seleccionados: 
     * ~~Más que un bug, tuve problemas tratando de pasar los datos seleccionados a un modal para mostrarlos. Entonces en la aplicación no se puede mostrar dicha selección.~~ Ya se pueden visualizar los pokemones seleccionados al dar Guardar, y están limitados a sólo los primeros 10 seleccionados.
 
- ## Cosas por mejoras
+ ## Cosas por mejorar
 
  * Darle un aviso al usuario de que ya no puede añadir más pokemones al tener ya 10 seleccionados
  * Crear una alerta para notificarle al usuario que sus pokemones fueron 'guardados' con éxito.
